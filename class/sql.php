@@ -15,20 +15,20 @@ class Sql extends PDO
 		//$this->conn = new PDO("sqlsrv:Database=dbphp7;server=localhost\SQLEXPRESS;ConnectionPooling=0", "", "");
 	}
 
-	private function setParams($statment, $parametrs = array())
+	private function setParams($statement, $parametrs = array())
 	{
 
 		foreach ($parametrs as $key => $value)
 		{
 			
-			$statment->bindParam($key, $value);
+			$statement->bindParam($key, $value);
 		}
 	}
 
-	private function setParam($statment, $key, $value)
+	private function setParam($statement, $key, $value)
 	{
 
-		$this->setParam($key, $value);
+		$this->setParam($statement, $key, $value);
 
 	}
 
