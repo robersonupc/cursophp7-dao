@@ -26,13 +26,17 @@ $cliente = new Usuario("jbs", "4567890");
 $cliente->insert();
 echo $cliente;
 */
+/*
+//Alterar um usuário
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->update("jpaulo", "9876543");
+echo $usuario;
+*/
 
 $usuario = new Usuario();
-
-$usuario->loadById(7);
-
-$usuario->update("jpaulo", "9876543");
-
+$usuario->loadById(4);
+$usuario->delete();
 echo $usuario;
 
  ?>
